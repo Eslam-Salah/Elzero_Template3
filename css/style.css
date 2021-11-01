@@ -145,6 +145,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   z-index: 1000;
+  transition: var(--main-transition);
 }
 
 header .container {
@@ -220,7 +221,7 @@ header .navbar > li:last-child > a i.rotate {
   }
   header .logo {
     margin: auto;
-    padding: 7px 0;
+    padding-top: 7px;
   }
   header .navbar {
     margin: auto;

@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
   if (scroll1 > scroll2) {
     header.style.top = "0";
   } else {
-    header.style.top = "-100px";
+    header.style.top = "-200px";
   }
   scroll1 = scroll2;
 });
@@ -32,7 +32,7 @@ let skillSection = document.querySelector(".our-skills");
 let theProgress = document.querySelectorAll(".the-progress span");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= skillSection.offsetTop - 150) {
+  if (window.scrollY >= skillSection.offsetTop - 100) {
     theProgress.forEach((span) => {
       span.style.width = span.dataset.width;
     });
@@ -78,7 +78,7 @@ let stateNumber = document.querySelectorAll(".box .number");
 let started = false; // Function Started ? No
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= stateSection.offsetTop - 200) {
+  if (window.scrollY >= stateSection.offsetTop - 250) {
     if (!started) {
       stateNumber.forEach((num) => {
         startCount(num);
