@@ -1,9 +1,38 @@
+// For Header
+let header = document.querySelector("header");
+let scroll1 = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  let scroll2 = window.scrollY;
+  if (scroll1 > scroll2) {
+    header.style.top = "0";
+  } else {
+    header.style.top = "-100px";
+  }
+  scroll1 = scroll2;
+});
+
+let otherLinks = document.querySelector(".otherLinks");
+let iconLinks = document.querySelector(".otherLinks i");
+
+otherLinks.addEventListener("click", () => {
+  otherLinks.classList.toggle("open");
+  iconLinks.classList.toggle("rotate");
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target !== otherLinks) {
+    otherLinks.classList.remove("open");
+    iconLinks.classList.remove("rotate");
+  }
+});
+
 // For Skills Section
 let skillSection = document.querySelector(".our-skills");
 let theProgress = document.querySelectorAll(".the-progress span");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= skillSection.offsetTop - 300) {
+  if (window.scrollY >= skillSection.offsetTop - 150) {
     theProgress.forEach((span) => {
       span.style.width = span.dataset.width;
     });
@@ -49,7 +78,7 @@ let stateNumber = document.querySelectorAll(".box .number");
 let started = false; // Function Started ? No
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= stateSection.offsetTop - 500) {
+  if (window.scrollY >= stateSection.offsetTop - 200) {
     if (!started) {
       stateNumber.forEach((num) => {
         startCount(num);
