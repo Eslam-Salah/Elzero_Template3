@@ -44,7 +44,7 @@ window.addEventListener("scroll", () => {
 });
 
 // For Events Section
-let countDate = new Date("Dec 31, 2021 23:59:59").getTime();
+let countDate = new Date("Dec 31, 2022 23:59:59").getTime();
 
 let newYear = setInterval(() => {
   // Get date now
